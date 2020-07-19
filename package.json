@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "cassandra-driver": "^4.5.2",
     "express": "^4.17.1",
     "mongoose": "^5.9.24",
@@ -13,7 +14,10 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@babel/preset-stage-2": "^7.8.3",
+    "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
+    "jest": "^26.1.0",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -24,7 +28,10 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "webpack": "webpack --mode development --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:coverage-all": "jest --coverage --watchAll"
   },
   "repository": {
     "type": "git",
